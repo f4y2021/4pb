@@ -33,7 +33,6 @@ laminate_option = st.selectbox(
     'Select Laminate',
     ('2 x ETXL400 + 2x UNIE300 in each skin', '2 x ETXL400 + 2x ETXL400-cross in each skin', '4x ETXL 400 cross in each skin'))
 
-
 joint_option = st.select_slider(
     '',
     options=['Homogeneous Panel', 'With Connection'])
@@ -46,6 +45,45 @@ strain_option = st.radio(
     "Select Strain Direction",
     ['exx', 'eyy', 'exy'])
 
+Sample_Number = ['1','2','3','4','5','6','7','8']
 
+Laminate = ['2 x ETXL400 + 2x ETXL400-cross in each skin',
+'4x ETXL 400 cross in each skin',
+'4x ETXL 400 cross in each skin',
+'2 x ETXL400 + 2x ETXL400-cross in each skin',
+'4x ETXL 400 cross in each skin',
+'2 x ETXL400 + 2x UNIE300 in each skin',
+'4x ETXL 400 cross in each skin',
+'2 x ETXL400 + 2x UNIE300 in each skin']
+
+Connection = ['With Connection',
+'With Connection',
+'With Connection',
+'With Connection',
+'With Connection',
+'With Connection',
+'With Connection',
+'With Connection']
+
+DIC_Area = ['Detail Between Top Supports',
+'Detail Between Top Supports',
+'Full Sample',
+'Full Sample',
+'Full Sample',
+'Full Sample',
+'Detail Between Top Supports',
+'Detail Between Top Supports']
+
+df1 = pd.DataFrame(list(zip(Sample_Number, Laminate, Connection,DIC_Area)))
+df1.columns = ['Sample Number', 'Laminate', 'Connection','DIC Area']
+
+for index, row in df1.iterrows():
+    if row['Laminate']==laminate_option:
+        if row['Connection']==joint_option:
+            if row['DIC Area']==full_option:
+                vid_select=row['Sample Number']
+
+
+st.write(vid_select)
 
 st.video('./Videos/sample1_exx.mp4', format="video/mp4", start_time=0)
