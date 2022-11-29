@@ -37,7 +37,7 @@ joint_option = st.select_slider(
     '',
     options=['Homogeneous Panel', 'With Connection'])
 
-if joint_option='With Connection'
+if joint_option=='With Connection':
     thick_option = st.radio(
     "Select Adhesive Thickness",
     ['0.3 mm', '1 mm'])
