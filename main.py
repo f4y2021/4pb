@@ -39,7 +39,7 @@ full_option = st.select_slider(
 
 strain_option = st.radio(
     "Select Strain Direction",
-    ['Exx', 'Eyy', 'Exy'])
+    ['exx', 'eyy', 'exy'])
 
 
 
