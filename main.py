@@ -91,7 +91,7 @@ for index, row in df1.iterrows():
 
 vid_select='./Videos/sample' + str(vid_select_number)+'_'+str(strain_option)+'.mp4'
 
-graph_select='./Plots/sample'+str(vid_select_number)
+graph_select='./Plots/sample'+str(vid_select_number)+'.csv'
 
 st.video(vid_select, format="video/mp4", start_time=0)
 
@@ -100,8 +100,8 @@ if st.button('Plot'):
     df1_instron = pd.read_csv(graph_select,sep=",",usecols= [1,2], names=["Displacement","Force"],header=1)
     
     
-    fig = px.scatter(df1_instron, x='Displacement (mm)', y='Force (N)', marginal_y="box",
-           marginal_x="box",template="ggplot2")
+    fig = px.scatter(df1_instron, x='Displacement (mm)', y='Force (N)', template="seaborn")
+    
     fig.update_layout(
         yaxis = dict(
             tickmode = 'linear',
