@@ -35,7 +35,7 @@ laminate_option = st.selectbox(
 
 joint_option = st.select_slider(
     '',
-    options=['Homogeneous Panel', 'With 0.3mm Adhesive Thickness', 'With 1mm Adhesive Thickness'])
+    options=['Homogeneous Panel', 'With 0.3mm Adhesive Thickness', 'With 1mm Adhesive Thickness'], value='With 0.3mm Adhesive Thickness')
 
 full_option = st.select_slider(
     '',
