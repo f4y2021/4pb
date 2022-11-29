@@ -33,6 +33,11 @@ laminate_option = st.selectbox(
     'Select Laminate',
     ('2 x ETXL400 + 2x UNIE300 in each skin', '2 x ETXL400 + 2x ETXL400-cross in each skin', '4x ETXL 400 cross in each skin'))
 
+
+joint_option = st.select_slider(
+    '',
+    options=['Homogeneous Panel', 'With Connection'])
+
 full_option = st.select_slider(
     '',
     options=['Full Sample', 'Detail Between Top Supports'])
