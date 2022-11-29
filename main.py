@@ -83,7 +83,7 @@ for index, row in df1.iterrows():
             if row['DIC Area']==full_option:
                 vid_select_number=row['Sample Number']
 
-vid_select='sample' + str(vid_select_number)+'_'+str(strain_option)
+vid_select='./Videos/sample' + str(vid_select_number)+'_'+str(strain_option)+'.mp4'
 
 st.write(vid_select)
 
