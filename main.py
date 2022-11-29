@@ -95,22 +95,25 @@ graph_select='./Plots/sample'+str(vid_select_number)+'.csv'
 
 st.video(vid_select, format="video/mp4", start_time=0)
 
-if st.button('Plot'):
+col1, col2, col3 = st.columns(3)
+with col2:
 
-    df1_instron = pd.read_csv(graph_select,sep=",",usecols= [1,2], names=["Displacement (mm)","Force (N)"],header=1)
-    
-    
-    fig = px.scatter(df1_instron, x='Displacement (mm)', y='Force (N)', template="seaborn")
-    
-    fig.update_layout(
-        yaxis = dict(
-            tickmode = 'linear',
-            tick0 = 0,
-            dtick = 500,
-            tickformat = '.2f'
+    if st.button('Plot'):
+
+        df1_instron = pd.read_csv(graph_select,sep=",",usecols= [1,2], names=["Displacement (mm)","Force (N)"],header=1)
+
+
+        fig = px.scatter(df1_instron, x='Displacement (mm)', y='Force (N)', template="seaborn")
+
+        fig.update_layout(
+            yaxis = dict(
+                tickmode = 'linear',
+                tick0 = 0,
+                dtick = 500,
+                tickformat = '.2f'
+            )
         )
-    )
-    st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
     
     
 #st.write(vid_select)
