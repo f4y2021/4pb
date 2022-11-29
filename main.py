@@ -19,11 +19,6 @@ import sys
 
 st.set_page_config(page_title="4-Point Bending",page_icon="⏩")
 
-
-[theme]
-base="dark"
-primaryColor="purple"
-
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
