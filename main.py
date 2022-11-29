@@ -17,7 +17,7 @@ from plotly.subplots import make_subplots
 import re
 import sys
 
-st.set_page_config(page_title="4-Point Bending",page_icon="⏩")
+st.set_page_config(page_title="4-Point Bending",page_icon="📈")
 
 m = st.markdown("""
 <style>
