@@ -35,12 +35,7 @@ laminate_option = st.selectbox(
 
 joint_option = st.select_slider(
     '',
-    options=['Homogeneous Panel', 'With Connection'])
-
-if joint_option=='With Connection':
-    thick_option = st.radio(
-    "Select Adhesive Thickness",
-    ['0.3 mm', '1 mm'])
+    options=['Homogeneous Panel', 'With 0.3mm Adhesive Thickness', 'With 1mm Adhesive Thickness'])
 
 full_option = st.select_slider(
     '',
@@ -61,14 +56,14 @@ Laminate = ['2 x ETXL400 + 2x ETXL400-cross in each skin',
 '4x ETXL 400 cross in each skin',
 '2 x ETXL400 + 2x UNIE300 in each skin']
 
-Connection = ['With Connection',
-'With Connection',
-'With Connection',
-'With Connection',
-'With Connection',
-'With Connection',
-'With Connection',
-'With Connection']
+Connection = ['With 0.3mm Adhesive Thickness',
+'With 0.3mm Adhesive Thickness',
+'With 0.3mm Adhesive Thickness',
+'With 0.3mm Adhesive Thickness',
+'With 1mm Adhesive Thickness',
+'With 1mm Adhesive Thickness',
+'With 1mm Adhesive Thickness',
+'With 1mm Adhesive Thickness']
 
 DIC_Area = ['Detail Between Top Supports',
 'Detail Between Top Supports',
