@@ -85,6 +85,6 @@ for index, row in df1.iterrows():
 
 vid_select='./Videos/sample' + str(vid_select_number)+'_'+str(strain_option)+'.mp4'
 
-st.write(vid_select)
+#st.write(vid_select)
 
-st.video('./Videos/sample1_exx.mp4', format="video/mp4", start_time=0)
+st.video(vid_select, format="video/mp4", start_time=0)
