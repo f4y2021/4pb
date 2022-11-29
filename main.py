@@ -30,5 +30,9 @@ st.image('logo_inegi_big.png')
 st.title('4-Point Bending: Sandwich Panels')
 
 laminate_option = st.selectbox(
-    'Laminate',
+    'Select Laminate',
     ('2 x ETXL400 + 2x UNIE300 in each skin', '2 x ETXL400 + 2x ETXL400-cross in each skin', '4x ETXL 400 cross in each skin'))
+
+strain_option = st.radio(
+    "Select Strain Direction",
+    ('Exx', 'Eyy', 'Exy'))
