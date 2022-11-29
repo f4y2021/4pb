@@ -36,6 +36,6 @@ laminate_option = st.selectbox(
 
 strain_option = st.radio(
     "Select Strain Direction",
-    ['Exx', 'Eyy', 'Exy'],horizontal=True)
+    ['Exx', 'Eyy', 'Exy'])
 
 
