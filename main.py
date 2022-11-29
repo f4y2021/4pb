@@ -77,7 +77,7 @@ DIC_Area = ['Detail Between Top Supports',
 df1 = pd.DataFrame(list(zip(Sample_Number, Laminate, Connection,DIC_Area)))
 df1.columns = ['Sample Number', 'Laminate', 'Connection','DIC Area']
 
-vid_select_number=1
+vid_select_number=3
 
 for index, row in df1.iterrows():
     if row['Laminate']==laminate_option:
