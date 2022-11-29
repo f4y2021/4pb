@@ -81,8 +81,9 @@ for index, row in df1.iterrows():
     if row['Laminate']==laminate_option:
         if row['Connection']==joint_option:
             if row['DIC Area']==full_option:
-                vid_select=row['Sample Number']
+                vid_select_number=row['Sample Number']
 
+vid_select='sample' + str(vid_select_number)+'_'+str(strain_option)
 
 st.write(vid_select)
 
