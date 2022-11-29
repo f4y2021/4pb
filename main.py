@@ -97,7 +97,7 @@ st.video(vid_select, format="video/mp4", start_time=0)
 
 if st.button('Plot'):
 
-    df1_instron = pd.read_csv(graph_select,sep=",",usecols= [1,2], names=["Displacement","Force"],header=1)
+    df1_instron = pd.read_csv(graph_select,sep=",",usecols= [1,2], names=["Displacement (mm)","Force (N)"],header=1)
     
     
     fig = px.scatter(df1_instron, x='Displacement (mm)', y='Force (N)', template="seaborn")
