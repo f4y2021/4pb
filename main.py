@@ -33,6 +33,9 @@ laminate_option = st.selectbox(
     'Select Laminate',
     ('2 x ETXL400 + 2x UNIE300 in each skin', '2 x ETXL400 + 2x ETXL400-cross in each skin', '4x ETXL 400 cross in each skin'))
 
+full_option = st.select_slider(
+    'Full Sample or Detail Between Top Supports',
+    options=['Full Sample', 'Detail Between Top Supports'])
 
 strain_option = st.radio(
     "Select Strain Direction",
