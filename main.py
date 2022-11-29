@@ -39,3 +39,5 @@ strain_option = st.radio(
     ['Exx', 'Eyy', 'Exy'])
 
 
+
+st.video('./Videos/sample1_exx.mp4', format="video/mp4", start_time=0)
