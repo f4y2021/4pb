@@ -17,7 +17,7 @@ from plotly.subplots import make_subplots
 import re
 import sys
 
-st.set_page_config(page_title="Instron & DIC",page_icon="⏩")
+st.set_page_config(page_title="4-Point Bending",page_icon="⏩")
 
 m = st.markdown("""
 <style>
@@ -27,4 +27,4 @@ div.stButton > button:first-child {
 </style>""", unsafe_allow_html=True)
 
 st.image('logo_inegi_big.png')
-st.title('Instron and DIC File Converter')
+st.title('4-Point Bending: Sandwich Panels')
