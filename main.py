@@ -93,7 +93,9 @@ vid_select='./Videos/sample' + str(vid_select_number)+'_'+str(strain_option)+'.m
 
 graph_select='./Plots/sample'+str(vid_select_number)
 
-if st.button('Plot Force - Displacement Graph for this sample'):
+st.video(vid_select, format="video/mp4", start_time=0)
+
+if st.button('Plot'):
 
     df1_instron = pd.read_csv(graph_select,sep=",",usecols= [1,2], names=["Displacement","Force"],header=1)
     
@@ -113,4 +115,4 @@ if st.button('Plot Force - Displacement Graph for this sample'):
     
 #st.write(vid_select)
 
-st.video(vid_select, format="video/mp4", start_time=0)
+
