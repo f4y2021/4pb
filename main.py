@@ -33,10 +33,9 @@ laminate_option = st.selectbox(
     'Select Laminate',
     ('2 x ETXL400 + 2x UNIE300 in each skin', '2 x ETXL400 + 2x ETXL400-cross in each skin', '4x ETXL 400 cross in each skin'))
 
-vert_hor=True
 
 strain_option = st.radio(
     "Select Strain Direction",
-    ['Exx', 'Eyy', 'Exy'],horizontal=vert_hor)
+    ['Exx', 'Eyy', 'Exy'],horizontal=True)
 
 
